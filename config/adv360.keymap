@@ -33,11 +33,11 @@
 
     default_layer {
       bindings = <
-        &kp GRAVE &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &kp N6                                                           &kp N7 &kp N8 &kp N9 &kp N0    &kp MINUS   &kp EQUAL   &kp SLASH
+        &kp GRAVE &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &kp N6                                                           &kp N7 &kp N8 &kp N9 &kp KP_N0    &kp MINUS   &kp EQUAL   &kp SLASH
         &lt 5 TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSPC
-        &lt 2 ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+        &lt 2 ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT &kp ESC  &kp RCTRL           &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &mt RSHFT ENTER
-        &kp LCTRL     &kp GRAVE &kp LGUI &mo 4 &mt LALT ENTER                &kp BSPC &kp SPACE   &kp END  &kp PG_DN &kp ENTER &kp SPACE              &mt RALT ENTER &kp DOWN  &kp LBKT &kp RBKT &mt RCTRL UP
+        &kp LCTRL     &kp GRAVE &kp LGUI &mo 4 &mt LALT ENTER                &kp BSPC &kp SPACE   &kp TAB  &kp PG_DN &kp ENTER &kp SPACE              &mt RALT ENTER &kp DOWN  &kp LBKT &kp RBKT &mt RCTRL RIGHT
       >;
     };
     keypad {
@@ -46,16 +46,16 @@
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
         &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
         &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
-        &mo 2     &kp GRAVE &kp LGUI &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp KP_N0              &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
+        &mo 2     &kp GRAVE &kp LGUI &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp KP_N0              &kp DOT     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo 2
       >;
     };
     fn {
       bindings = <
         &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 1                                           &mo 3 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-        &trans &trans &trans &trans &trans &trans  &none                                           &none &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans &trans  &none        &trans &trans &trans &trans        &none &kp LEFT &kp DOWN &kp UP &kp RIGHT  &kp SLASH  &kp BACKSLASH
-        &trans &trans &trans &trans &trans &trans                      &trans &trans                     &kp LS(N6) &kp LS(N4) &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans              &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans &trans  &none                                           &bl BL_TOG &trans &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans &trans  &none        &trans &trans &trans &trans        &rgb_ug RGB_TOG &kp LEFT &kp DOWN &kp UP &kp RIGHT  &kp SLASH  &kp BACKSLASH
+        &trans &trans &trans &trans &trans &trans                      &trans &trans                     &kp LS(N6) &kp LS(N4) &trans &trans  &kp PG_UP  &trans
+        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &bl BL_DEC &bl BL_INC              &trans &trans &kp HOME  &kp PG_DN  &kp END
       >;
     };
     mod {
@@ -73,7 +73,7 @@
         &trans &trans &trans &trans &trans &trans  &none                                           &none &trans &kp N7 &kp N8 &kp N9  &trans  &trans
         &trans &trans &trans &trans &trans &trans  &none        &trans &trans &trans &trans &trans &trans &kp N4 &kp N5 &kp N6 &trans  &trans
         &trans &trans &trans &trans &trans &trans                      &trans &trans                     &trans &kp N1 &kp N2 &kp N3  &trans  &trans
-        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans              &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &kp KP_N0              &kp DOT &trans &trans  &trans  &trans
       >;
     };
     vim2 {
