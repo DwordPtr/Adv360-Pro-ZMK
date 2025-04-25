@@ -41,10 +41,10 @@
     default_layer {
       bindings = <
         &kp GRAVE &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &kp N6                                                           &kp N7 &kp N8 &kp N9 &kp N0    &kp MINUS   &kp EQUAL   &kp SLASH
-        &lt 5 TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSPC
-        &lt 2 ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT &kp ESC  &kp RCTRL           &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-        &mt LSHFT ENTER &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp COMMA &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &mt RSHFT ENTER
-        &kp LCTRL     &kp GRAVE &kp LGUI &mo 4 &mt LALT ENTER                &lt 5 SPACE &lt 2 BSPC   &lt 4 TAB  &kp RSHFT &kp ENTER &kp SPACE              &mt RALT ENTER &kp RGUI  &kp LBKT &kp RBKT &mt RCTRL RIGHT
+        &lt 5 TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &kp BACKSLASH &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSPC
+        &lt 2 ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &mt LGUI ESC &kp LALT &kp ESC  &kp RCTRL           &kp PIPE &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+        &mt LSHFT ENTER &kp Z     &kp X    &kp C    &kp V      &kp B               &mt LCTRL COMMA &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &mt RSHFT ENTER
+        &kp LCTRL     &kp GRAVE &mt LGUI BACKSLASH &mo 4 &mt LALT ENTER         &lt 5 SPACE &lt 2 BSPC   &lt 4 TAB  &kp RSHFT &kp ENTER &kp SPACE       &mt RALT ENTER &mt RGUI BACKSLASH  &kp LBKT &kp RBKT &mt RCTRL RIGHT
       >;
     };
     keypad {
@@ -88,8 +88,8 @@
       bindings = <
         &trans &trans &trans &trans &trans &trans &trans                                           &trans &trans &trans &trans &trans &trans &trans
         &trans &trans &trans &trans &trans &trans  &none                                           &none &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans &trans  &none        &trans &trans &trans &trans &kp CAPS &trans &kp PG_DN &kp PG_UP &trans  &trans  &trans
-        &trans &trans &trans &trans &trans &trans                      &trans &trans                     &trans &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans &trans  &none        &trans &trans &trans &trans &kp CAPS &kp HOME &kp PG_DN &kp PG_UP &kp END  &trans  &trans
+        &trans &trans &trans &trans &trans &trans                      &trans &trans                     &kp LEFT &kp RIGHT &trans &trans  &kp BACKSLASH  &trans
         &trans &trans &trans &trans &trans               &trans &trans &trans &trans &kp MINUS &kp UNDERSCORE              &trans &trans &trans  &trans  &trans
       >;
     };
